@@ -5,9 +5,7 @@ import click
 import mlflow
 import mlflow.sklearn
 
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import f1_score
-from sklearn.metrics import precision_score
+
 from sklearn.model_selection import cross_validate
 import numpy as np
 from sklearn.pipeline import make_pipeline
