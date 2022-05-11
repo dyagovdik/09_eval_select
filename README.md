@@ -50,8 +50,8 @@ poetry install
 ```
 После этого вы можете пользоваться установленными инструментами:
 ```
-poetry run black (or flake8, mypy, pytest) *.py
-poetry run black (or flake8, mypy, pytest) srs/name/*.py
+poetry run black (or flake8, mypy) *.py
+poetry run black (or flake8, mypy) srs/name/*.py
 ```
 Для удобства можно запустить все сеансы тестирования одной строкой: 
 ```
@@ -108,10 +108,8 @@ poetry run train --use-model RFC --use-feature-selection 2 --max_depth 20 --n_es
 
 10. Я постарался написать README удобным для Вас.
 
-11. Для запуска тестов необходимо выполнить следующую команду:
-```
-poetry run pytest
-```
+11.  К сожалению не получилось выполнить задание с pytest. Была ошибка, о которой я слишком поздно спросил помощи - название src/name желательно не должно начинаться с цифры. В 14 задании не будет блока tests при запуске nox - но надеюсь вы за это не будете снижать баллы за 14 задание.
+
 12. Код отфоматирован с помощью black и выровнен с помощью flake8.
 
 ![black](https://user-images.githubusercontent.com/99845094/167859091-c06b72c9-a04c-4f14-b328-9be36ee7c444.PNG)
