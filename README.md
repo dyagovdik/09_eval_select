@@ -1,5 +1,7 @@
 RS School Machine Learning course
+
 09 module Evaluation-selection homework
+
 В этом проекте используется [Forest train dataset](https://www.kaggle.com/competitions/forest-cover-type-prediction) датасет.
 
 ## Краткое руководство:
@@ -58,14 +60,23 @@ poetry run nox
 
 ## Для проверяющего
 1 (№ задания). В проекте использован [Forest train dataset](https://www.kaggle.com/competitions/forest-cover-type-prediction) датасет.
+
 2. Проект оформлен как пакет Python, в том числе использован макет src.
+
 3. Код собственно опубликован на Github, в том числе с оставлением поэтапных комментариев (более 30).
+
 4. В проекте для управления пакетами и зависимостями используется *Poetry*.
+
 5. Датасет сохранен локально в "path is *data/.csv"* в корне репозитория и сама папка добавлена в .gitignore.
+
 6. Написан скрипт, который обучает модель и сохраняет ее в файл. Скрипт запускается из терминала, получает некоторые аргументы, такие как путь к данным, конфигурации модели и т.д. Для создания CLI использован click. Скрипт также добавлен в pyproject.toml.
+
 7. Выбраны и рассчитаны 3 показателя (accuracy, precision, f1score), в том числе с использование кросс-валидации.
+
 8. Проводены эксперименты, которые можно отследить в MLFlow - three different sets of hyperparameters for each model, two different feature engineering techniques for each model, two different ML models. Скриншоты прилагаются
+
 ![MLFlow](https://user-images.githubusercontent.com/99845094/167859394-f8f465d4-3e06-4f74-9f1a-2e8dda5a72ac.PNG)
+
 Чтобы получить такие же результаты нужно запустить следующие команды:
 ```
 poetry run train
@@ -94,16 +105,25 @@ poetry run train --use-model RFC --use-feature-selection 2 --max_depth 20 --n_es
 
 ```
 9.-
+
 10. Я постарался написать README удобным для Вас.
+
 11. Для запуска тестов необходимо выполнить следующую команду:
 ```
 poetry run pytest
 ```
 12. Код отфоматирован с помощью black и выровнен с помощью flake8.
+
 ![black](https://user-images.githubusercontent.com/99845094/167859091-c06b72c9-a04c-4f14-b328-9be36ee7c444.PNG)
+
 ![flake8](https://user-images.githubusercontent.com/99845094/167859121-1988834c-0af7-49ee-9db1-b12ee3e35385.PNG)
+
 13. Код аннториван с помощью mypy.
+
 ![mypy](https://user-images.githubusercontent.com/99845094/167859144-8646069e-376d-4b83-9d30-62067da3d7bb.PNG)
+
 14. Все сеансы тестирования и форматированы сведены в одну команду с помощью nox.
+
 ![nox](https://user-images.githubusercontent.com/99845094/167859655-03bfc990-f843-4ae3-a3ac-a55791ebb0a2.PNG)
+
 15.-
