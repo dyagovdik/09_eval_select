@@ -3,6 +3,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 
+
 def create_pipeline_LogReg(
     use_scaler: bool, max_iter: int, logregc: float, random_state: int
 ) -> Pipeline:
@@ -12,15 +13,19 @@ def create_pipeline_LogReg(
     pipeline_steps.append(
         (
             "classifier",
-            LogisticRegression(
-                random_state=random_state, max_iter=max_iter, C=logregc
-            ),
+            LogisticRegression(random_state=random_state, max_iter=max_iter, C=logregc),
         )
     )
     return Pipeline(steps=pipeline_steps)
 
+
 def create_pipeline_RFC(
-    use_scaler: bool, random_state: int, criterion: str, max_depth: int, bootstrap: bool, n_estimators: int 
+    use_scaler: bool,
+    random_state: int,
+    criterion: str,
+    max_depth: int,
+    bootstrap: bool,
+    n_estimators: int,
 ) -> Pipeline:
     pipeline_steps = []
     if use_scaler:
@@ -28,10 +33,14 @@ def create_pipeline_RFC(
 
         pipeline_steps.append(
             (
-                "classifier", 
+                "classifier",
                 RandomForestClassifier(
-                    n_estimators=n_estimators, random_state=random_state, criterion=criterion, max_depth=max_depth, bootstrap=bootstrap
-            ),
+                    n_estimators=n_estimators,
+                    random_state=random_state,
+                    criterion=criterion,
+                    max_depth=max_depth,
+                    bootstrap=bootstrap,
+                ),
+            )
         )
-    )
     return Pipeline(steps=pipeline_steps)
